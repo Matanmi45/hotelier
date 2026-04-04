@@ -175,5 +175,5 @@ userSchema.pre(/^find/, function (this: Query<any, any>) {
 });
 
 
-module.exports = mongoose.model('User', userSchema);
+export const User = mongoose.model('User', userSchema);
 

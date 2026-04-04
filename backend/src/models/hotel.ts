@@ -15,7 +15,7 @@ import mongoose, {
 // --------------------
 
 // Define interface for Amenities
-interface IAmenities {
+export interface IAmenities {
     swimmingPool: boolean;
     gym: boolean;
     powerBackup: boolean;
@@ -26,7 +26,7 @@ interface IAmenities {
     kidsPlayArea: boolean;
 }
 
-interface IAddress {
+export interface IAddress {
     addressLine1: string;
     addressLine2?: string;
     landmark?: string;

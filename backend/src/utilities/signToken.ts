@@ -1,11 +1,20 @@
-import jwt from 'jsonwebtoken';
+import jwt, { SignOptions } from "jsonwebtoken";
+import { Types } from "mongoose";
 
-module.exports = (userId: string) => {
-    return jwt.sign(
-        { userId: userId}, 
-        process.env.SECRET_KEY!,
-        { 
-            expiresIn: parseInt(process.env.LOGIN_EXPIRES!)
-        }
-    );
+interface JwtPayload {
+  userId: string;
 }
+
+export const signToken = (
+  userId: string | Types.ObjectId
+): string => {
+  const payload: JwtPayload = {
+    userId: userId.toString()
+  };
+
+  return jwt.sign(
+    payload,
+    process.env.SECRET_KEY!,
+    { expiresIn: parseInt(process.env.LOGIN_EXPIRES || "3600", 10) }
+  );
+};

@@ -55,7 +55,7 @@ const roomSchema = new Schema<IRoom, RoomModel>({
 // --------------------
 // 4. Static Method
 // --------------------
-roomSchema.static.calcCheapestPrice = async function (
+roomSchema.statics.calcCheapestPrice = async function (
   hotelId: mongoose.Types.ObjectId
 ): Promise<void> {
   const hotel = await Hotel.findById(hotelId)

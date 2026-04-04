@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./",
+   "paths": {
+    "@/*": ["./src/*"]
+   },
+  //  "noUnusedLocals": true,
+  //  "noUnusedParameters": true,
+  //  "allowUnusedLabels": false,
+  //  "noUncheckedSideEffectImports": true,
+  //  "noFallthroughCasesInSwitch": true,
+  //  "allowUnreachableCode": false,
+   
+
+  //  // optional but highly suggested
+  //   "noPropertyAccessFromIndexSignature": true,
+  //   "noUncheckedIndexedAccess": true,
+  //   "noImplicitAny": true,
+  //   "erasableSyntaxOnly": false,
+
+  //   //personal preferences
+  //   "noImplicitOverride": true,
+  //   "noErrorTruncation": false,
+  //   "exactOptionalPropertyTypes": true,
+
+  //   "allowJs": true,
+  //   "checkJs": true
+
+
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

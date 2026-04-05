@@ -6,7 +6,7 @@ import app from "./app";
 // --------------------
 // Load Env Variables
 // --------------------
-dotenv.config({ path: "./config.env" });
+dotenv.config({ path: ".env" });
 
 // --------------------
 // Handle Uncaught Exceptions
